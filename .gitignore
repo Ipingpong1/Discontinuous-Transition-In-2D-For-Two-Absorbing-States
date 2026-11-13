@@ -1,0 +1,58 @@
+# Local settings and credentials
+.claude/
+.mcp.json
+.env
+.env.*
+!.env.example
+
+# Large local datasets, release bundles, and generated reports
+/data/
+/releases/
+/reports/
+/dn-v3-clean-release-keep/
+
+# Compiled programs and caches
+/dnsim
+/dnsim_v11
+/dnsim_v12
+__pycache__/
+*.py[cod]
+*.o
+.mplconfig/
+
+# Track campaign source, documentation, and configuration; keep run outputs local.
+/campaign/**/*
+!/campaign/**/
+!/campaign/**/*.py
+!/campaign/**/*.c
+!/campaign/**/*.h
+!/campaign/**/*.cu
+!/campaign/**/*.cuh
+!/campaign/**/*.inc
+!/campaign/**/*.sh
+!/campaign/**/*.slurm
+!/campaign/**/*.sbatch
+!/campaign/**/*.md
+!/campaign/**/*.tex
+!/campaign/**/*.patch
+!/campaign/**/Makefile
+!/campaign/**/requirements*.txt
+!/campaign/**/hpc/**/*.json
+/campaign/**/submitted.json
+/campaign/**/results/
+/campaign/**/lit/
+/campaign/**/__pycache__/
+
+# Document build intermediates and archives
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.zip
+*.tar.gz
+*.tar.zst
+.DS_Store

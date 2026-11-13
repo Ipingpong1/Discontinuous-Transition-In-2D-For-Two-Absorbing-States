@@ -1,0 +1,139 @@
+\section{Numerical details}
+\label{app:numerics}
+
+For complete simulation protocols, see Sec.~\ref{sec:protocols}.
+
+\textit{Code.} The simulator stores 64 sites per 64-bit word. The eight neighbor bits of all sites
+of a word are summed with bitwise adder trees, giving the number of live neighbors $k$ in four
+bit planes; the flip class of each site is $(\sigma, k)$, with the flip probability $f_{\sigma k}$
+read from an $2\times 9$ table, so that any outer-totalistic rule, Eq.~\eqref{M-eq:rule}, and the lazy
+tables of Sec.~\ref{sec:async} are run by the same kernel. Each site draws one 32-bit uniform per
+step from Philox$4\times32$-10~\cite{salmon2011} with counter (time, row, word, draw), and the 64
+comparisons with the per-class thresholds are done bit-serially in parallel. Validation: (i) a
+bit-exact comparison with a naive per-site implementation for five rules on four lattice shapes,
+including one-word-wide and three-row lattices; (ii) per-class flip frequencies for an 18-class
+table (variance of the $z$ scores over 560 repetitions $1.04\pm0.06$) and a $1.3\times10^8$-sample
+test of the shared comparison on a voter-like table (per-class frequencies and adjacent-lane
+independence, $|z|<2$); (iii) identical output for any number of threads and across restarts
+from checkpoints; (iv) agreement with an independent GPU implementation of the $p = 0$ model to
+1\% in the stationary density.
+
+\textit{CUDA extension.} The dense GPU backend uses the original CPU integer
+flip function and Philox implementation, extracted automatically into device
+code. Two lattice buffers implement simultaneous updates; batches of 256 steps
+are submitted as CUDA graphs without changing the update order or counters.
+The host retains initialization, observables, profiles, and checkpoint format.
+Validation compares full configurations, time series, profiles, snapshots, and
+checkpoints byte for byte with the CPU implementation. Cases include one-word
+rows, an $L=2048$ lattice, Moore and von Neumann neighborhoods, lazy update
+tables, irregular output schedules, graph-batch boundaries, and counters near
+$2^{32}$. CPU-to-GPU and GPU-to-CPU restarts reproduce the same trajectories.
+The GPU checks absorption at scheduled outputs, so its absorption times are
+interval observed. The lifetime and sparse-replica campaigns use the CPU code.
+Parameter manifests record distinct 64-bit seeds, source and executable hashes,
+and completion status; interrupted runs are identified rather than silently
+pooled with completed ensembles.
+
+\textit{Replica mode.} For seeds and droplets, only the bounding box of the sites with a
+disagreeing neighbor (plus a margin) is updated, refitted every 32 steps. This is exact because a
+site with $j = 0$ cannot flip and its random numbers are indexed by position, not by the order
+of updates; over 200 seeds, box and full-lattice updating give identical configurations at
+every step. A replica whose box comes within 2 rows or 64 columns of the lattice edge is stopped
+and recorded as an escape. Its later survival is unobserved; the
+seed-curve convention retains it as a separately tabulated contribution,
+while the droplet growth observable counts the escape itself. In the pure voter model the method reproduces the martingale
+$\langle A(t)\rangle = 4$ for the number of live sites of a $2\times2$ seed (within $|z|<0.94$
+at all 38 output times over $2\times10^5$ replicas) and $P_s(t)\propto\ln t/t$.
+
+\textit{Front tracking.} The broad strip survey in Table~\ref{tab:line}
+uses a smoothed row profile and local interpolation of the velocities bracketing
+reversal. For the orientation, extended-strip, and $p=1/2$ lazy-update
+analyses, we explicitly track
+the outer envelope: the lowest and highest bins whose smoothed activity exceeds
+$0.3$ of the interior reference value measured at $t=10^3$. An interior hole
+cannot stop this envelope. We also retain the center-connected-component width,
+interior activity, and hole fraction as diagnostics. No run is removed simply
+because its interior density is small in these corrected analyses.
+The other supporting parameter surveys retain their legacy center-connected
+tracker and interior-activity validity criterion; their crossing estimates
+are not assigned the precision of the extended campaign.
+
+For a tilted band, $s=(ay-bx)\bmod L$ has $L$ bins containing $L$ sites each,
+with normal spacing $1/\sqrt{a^2+b^2}$. Smoothing is over nine normal lattice
+spacings, converted to an odd number of bins. The front speed is half the slope
+of the normal width. Fits stop when the band leaves the width range
+$[0.15L,0.85L]$ in bin coordinates, before winding or disappearance invalidates
+the geometry. In the broad orientation survey the principal window begins at
+$t=2\times10^4$; fits starting at $10^4$ and $4\times10^4$ and threshold
+fractions 0.2, 0.3, and 0.5 quantify sensitivity. Local bracketing estimates,
+linear fits over wider intervals, and quadratic fits are compared explicitly.
+Independent runs are resampled within each $q$ for the crossing intervals;
+uncertainty from the fit model or time window is reported separately. The
+extended campaign additionally compares late and nonoverlapping time windows;
+each published fit requires full coverage of its declared window for every seed.
+
+\textit{Sampling uncertainty.} Independent realizations are the statistical
+units; lattice sites and successive output records are not treated as
+independent samples. For some scalar means and paired mean differences in the
+four-run ensembles, the reductions enumerate all $4^4=256$ ordered
+empirical bootstrap resamples; other retained reductions use Monte Carlo
+resampling with the count recorded in their provenance. Enumeration removes Monte Carlo error in the
+resampling calculation, not the limited coverage accuracy from four runs.
+Front-crossing intervals additionally condition on the stated interpolation,
+window, and geometrical eligibility. Pointwise intervals are distinguished
+from the simultaneous orientation contrasts. Exact binomial intervals are
+used for fixed-count survival endpoints. All these sampling intervals remain
+separate from finite-size, finite-time, and estimator sensitivity.
+
+\textit{Spatial correlations.} The large-system correlations are evaluated
+directly from the final packed-bit configurations, using periodic shifts in
+each coordinate direction. Each stored configuration is checked against its
+recorded size, time, digest, magnetization, and nearest-neighbor activity;
+the identity $C(1)=1-2\rho$ supplies an additional consistency check.
+All declared runs are retained. The same resampled run indices are used at
+every separation when constructing the pointwise uncertainty bands.
+These final-time measurements do not assume an exponential correlation form.
+
+\textit{Droplets and holes.} For a row with live count $n_y$, the signed chord is $c_y=2n_y$ for an
+active disk and $c_y=L-2n_y$ for an absorbing hole. The primary estimator is
+$A=\sum_{|y-L/2|<1.3R_0+50}\max(c_y,0)$ with $R_0=1000$, followed by
+$R=\sqrt{A/\pi}$. The crop reduces noise from the surrounding active phase;
+rectification can introduce a positive area bias. We therefore also compute
+$A_{\rm full}=\sum_y c_y$ and the trimmed signed sum, and report the resulting
+rate sensitivity. Every such area stays positive in the retained trajectories.
+Radius slopes are fitted over $2\times10^4\le t\le2\times10^5$.
+The curvature overlays integrate the radius-dependent equation throughout
+this window, with their initial radius fixed by the observed mean.
+
+
+\textit{Layer edges.} For the roughness of the wetting layer (Sec.~\ref{sec:swall}) full
+configurations were stored every $10^5$ steps. In each column the two edges of the layer are its
+lowest and highest interface sites within $L_y/4$ of the wall; their variances along the wall and
+the height-difference correlation $\langle[h(x+r)-h(x)]^2\rangle$ give the roughness.
+These are two physical edges in the wall geometry. The same two-extrema
+rule applied to a half-active band mixes its exterior front with an artificial
+window boundary inside the active bulk. We therefore omit the previous
+free-band comparator. The original band snapshots needed to replace that
+curve are absent from the local data release; no corrected numerical
+comparison is inferred from other snapshots.
+
+\textit{Cost.} The earlier CPU campaigns used approximately 2200 core hours,
+on Intel Xeon Platinum 8592+ nodes and a workstation, at
+$(0.9$--$2.8)\times10^9$ site updates per second per core. The additional
+campaign used 58.4 GPU allocation hours on NVIDIA H200 devices and
+99.0 CPU-only allocated core hours. These allocation totals include validation,
+I/O, and failed or restarted attempts; GPU-host CPU allocations are recorded
+separately. Across the 40 staged GPU workers, mean sampled utilization during
+simulation runs ranged from 92.7\% to 99.9\%. These samples include in-run
+I/O but exclude build, validation, inter-task staging, and each run's initial
+20 seconds; they are not allocation-wide efficiency estimates.
+
+The additional front uncertainty check linearizes each locally interpolated
+zero with respect to the two bracketing group means. It combines independent
+within-group sample variances with Welch--Satterthwaite degrees of freedom.
+For temporal contrasts, the same run's early and late linearized contributions
+are paired before estimating variance. The angular contrast applies a
+Bonferroni adjustment for the three pairwise direction comparisons. This is
+a sensitivity calculation conditional on the observed bracket; it cannot
+supply exact coverage from four runs or replace an assessment of systematic
+front and finite-time effects.

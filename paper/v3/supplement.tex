@@ -1,0 +1,28 @@
+\input{preamble}
+\externaldocument[M-]{main}
+\renewcommand{\thesection}{S\Roman{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\Roman{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\begin{document}
+\title{Supplemental material: Discontinuous transition into two symmetric absorbing states in two dimensions}
+\date{4 November 2026}
+\maketitle
+\raggedbottom
+\setlength{\parskip}{0pt}
+This supplement supplies the detailed windows, geometries, finite-size
+comparisons and model checks for the accompanying paper.
+Labels without an S prefix refer to the main paper. Numerical intervals
+retain their stated sampling assumptions; reference, estimator and observation
+window sensitivity are reported separately.
+
+\input{sections/supp_protocols}
+\input{sections/supp_numerics}
+\input{sections/supp_fronts}
+\input{sections/supp_bulk}
+\input{sections/supp_wetting}
+\input{sections/supp_survey}
+\input{sections/supp_model}
+\input{sections/molofsky}
+\bibliography{refs}
+\end{document}

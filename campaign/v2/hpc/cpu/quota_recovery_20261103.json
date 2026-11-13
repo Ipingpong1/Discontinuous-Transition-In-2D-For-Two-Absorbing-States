@@ -1,0 +1,695 @@
+{
+  "utc": "2026-11-03T06:28:20.910548+00:00",
+  "completed": [
+    "life_q0.046359_L64_rep01",
+    "life_q0.046359_L128_rep01",
+    "life_q0.046359_L192_rep01",
+    "life_q0.046359_L256_rep01",
+    "life_q0.046359_L64_rep02",
+    "life_q0.046359_L128_rep02",
+    "life_q0.046359_L192_rep02",
+    "life_q0.046359_L256_rep02",
+    "life_q0.046359_L64_rep03",
+    "life_q0.046359_L128_rep03",
+    "life_q0.046359_L192_rep03",
+    "life_q0.046359_L256_rep03",
+    "life_q0.046359_L64_rep04",
+    "life_q0.046359_L128_rep04",
+    "life_q0.046359_L192_rep04",
+    "life_q0.046359_L256_rep04",
+    "life_q0.046359_L64_rep05",
+    "life_q0.046359_L128_rep05",
+    "life_q0.046359_L192_rep05",
+    "life_q0.046359_L256_rep05",
+    "life_q0.046359_L64_rep06",
+    "life_q0.046359_L128_rep06",
+    "life_q0.046359_L192_rep06",
+    "life_q0.046359_L256_rep06",
+    "life_q0.046359_L64_rep07",
+    "life_q0.046359_L128_rep07",
+    "life_q0.046359_L192_rep07",
+    "life_q0.046359_L256_rep07",
+    "life_q0.046359_L64_rep08",
+    "life_q0.046359_L128_rep08",
+    "life_q0.046359_L192_rep08",
+    "life_q0.046359_L256_rep08",
+    "life_q0.046359_L64_rep09",
+    "life_q0.046359_L128_rep09",
+    "life_q0.046359_L192_rep09",
+    "life_q0.046359_L256_rep09",
+    "life_q0.046359_L64_rep10",
+    "life_q0.046359_L128_rep10",
+    "life_q0.046359_L192_rep10",
+    "life_q0.046359_L256_rep10",
+    "life_q0.046359_L64_rep11",
+    "life_q0.046359_L128_rep11",
+    "life_q0.046359_L192_rep11",
+    "life_q0.046359_L64_rep12",
+    "life_q0.046359_L128_rep12",
+    "life_q0.046359_L64_rep13",
+    "life_q0.046359_L128_rep13"
+  ],
+  "incomplete": [
+    "life_q0.046359_L256_rep11",
+    "life_q0.046359_L192_rep12",
+    "life_q0.046359_L256_rep12",
+    "life_q0.046359_L192_rep13",
+    "life_q0.046359_L256_rep13",
+    "life_q0.046359_L64_rep14",
+    "life_q0.046359_L128_rep14",
+    "life_q0.046359_L192_rep14",
+    "life_q0.046359_L256_rep14",
+    "life_q0.046359_L64_rep15",
+    "life_q0.046359_L128_rep15",
+    "life_q0.046359_L192_rep15",
+    "life_q0.046359_L256_rep15",
+    "life_q0.046359_L64_rep16",
+    "life_q0.046359_L128_rep16",
+    "life_q0.046359_L192_rep16",
+    "life_q0.046359_L256_rep16",
+    "life_q0.046359_L64_rep17",
+    "life_q0.046359_L128_rep17",
+    "life_q0.046359_L192_rep17",
+    "life_q0.046359_L256_rep17",
+    "life_q0.046359_L64_rep18",
+    "life_q0.046359_L128_rep18",
+    "life_q0.046359_L192_rep18",
+    "life_q0.046359_L256_rep18",
+    "life_q0.046359_L64_rep19",
+    "life_q0.046359_L128_rep19",
+    "life_q0.046359_L192_rep19",
+    "life_q0.046359_L256_rep19",
+    "life_q0.046359_L64_rep20",
+    "life_q0.046359_L128_rep20",
+    "life_q0.046359_L192_rep20",
+    "life_q0.046359_L256_rep20",
+    "life_q0.046359_L64_rep21",
+    "life_q0.046359_L128_rep21",
+    "life_q0.046359_L192_rep21",
+    "life_q0.046359_L256_rep21",
+    "life_q0.046359_L64_rep22",
+    "life_q0.046359_L128_rep22",
+    "life_q0.046359_L192_rep22",
+    "life_q0.046359_L256_rep22",
+    "life_q0.046359_L64_rep23",
+    "life_q0.046359_L128_rep23",
+    "life_q0.046359_L192_rep23",
+    "life_q0.046359_L256_rep23",
+    "life_q0.046359_L64_rep24",
+    "life_q0.046359_L128_rep24",
+    "life_q0.046359_L192_rep24",
+    "life_q0.046359_L256_rep24",
+    "life_q0.046359_L64_rep25",
+    "life_q0.046359_L128_rep25",
+    "life_q0.046359_L192_rep25",
+    "life_q0.046359_L256_rep25",
+    "life_q0.046359_L64_rep26",
+    "life_q0.046359_L128_rep26",
+    "life_q0.046359_L192_rep26",
+    "life_q0.046359_L256_rep26",
+    "life_q0.046359_L64_rep27",
+    "life_q0.046359_L128_rep27",
+    "life_q0.046359_L192_rep27",
+    "life_q0.046359_L256_rep27",
+    "life_q0.046359_L64_rep28",
+    "life_q0.046359_L128_rep28",
+    "life_q0.046359_L192_rep28",
+    "life_q0.046359_L256_rep28",
+    "life_q0.046359_L64_rep29",
+    "life_q0.046359_L128_rep29",
+    "life_q0.046359_L192_rep29",
+    "life_q0.046359_L256_rep29",
+    "life_q0.046359_L64_rep30",
+    "life_q0.046359_L128_rep30",
+    "life_q0.046359_L192_rep30",
+    "life_q0.046359_L256_rep30",
+    "life_q0.046359_L64_rep31",
+    "life_q0.046359_L128_rep31",
+    "life_q0.046359_L192_rep31",
+    "life_q0.046359_L256_rep31",
+    "life_q0.046359_L64_rep32",
+    "life_q0.046359_L128_rep32",
+    "life_q0.046359_L192_rep32",
+    "life_q0.046359_L256_rep32",
+    "near_q0.04605_L192_rep01",
+    "near_q0.04605_L256_rep01",
+    "near_q0.04605_L384_rep01",
+    "near_q0.04605_L192_rep02",
+    "near_q0.04605_L256_rep02",
+    "near_q0.04605_L384_rep02",
+    "near_q0.04605_L192_rep03",
+    "near_q0.04605_L256_rep03",
+    "near_q0.04605_L384_rep03",
+    "near_q0.04605_L192_rep04",
+    "near_q0.04605_L256_rep04",
+    "near_q0.04605_L384_rep04",
+    "near_q0.04605_L192_rep05",
+    "near_q0.04605_L256_rep05",
+    "near_q0.04605_L384_rep05",
+    "near_q0.04605_L192_rep06",
+    "near_q0.04605_L256_rep06",
+    "near_q0.04605_L384_rep06",
+    "near_q0.04605_L192_rep07",
+    "near_q0.04605_L256_rep07",
+    "near_q0.04605_L384_rep07",
+    "near_q0.04605_L192_rep08",
+    "near_q0.04605_L256_rep08",
+    "near_q0.04605_L384_rep08",
+    "near_q0.04605_L192_rep09",
+    "near_q0.04605_L256_rep09",
+    "near_q0.04605_L384_rep09",
+    "near_q0.04605_L192_rep10",
+    "near_q0.04605_L256_rep10",
+    "near_q0.04605_L384_rep10",
+    "near_q0.04605_L192_rep11",
+    "near_q0.04605_L256_rep11",
+    "near_q0.04605_L384_rep11",
+    "near_q0.04605_L192_rep12",
+    "near_q0.04605_L256_rep12",
+    "near_q0.04605_L384_rep12",
+    "near_q0.04605_L192_rep13",
+    "near_q0.04605_L256_rep13",
+    "near_q0.04605_L384_rep13",
+    "near_q0.04605_L192_rep14",
+    "near_q0.04605_L256_rep14",
+    "near_q0.04605_L384_rep14",
+    "near_q0.04605_L192_rep15",
+    "near_q0.04605_L256_rep15",
+    "near_q0.04605_L384_rep15",
+    "near_q0.04605_L192_rep16",
+    "near_q0.04605_L256_rep16",
+    "near_q0.04605_L384_rep16"
+  ],
+  "checkpoints": [
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep01.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        23571
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep01.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        40521
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep01.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep01.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep02.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        27699
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep02.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        387840
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep02.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep02.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep03.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        4008
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep03.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        766010
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep03.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep03.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep04.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        10741
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep04.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        1950675
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep04.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep04.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep05.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        11287
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep05.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        368659
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep05.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep05.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep06.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        30894
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep06.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        237080
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep06.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep06.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep07.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        23629
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep07.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        398685
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep07.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep07.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep08.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        23217
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep08.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        1383110
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep08.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep08.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep09.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        16395
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep09.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        1370802
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep09.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        4095667
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep09.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep10.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        7182
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep10.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        785296
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep10.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep10.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep11.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        12966
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep11.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        676259
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep11.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        10000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep11.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        6000000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep12.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        27678
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep12.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        269541
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep12.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        6500000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L256_rep12.ckpt",
+      "bytes": 8224,
+      "header": [
+        256,
+        256,
+        1700000
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L64_rep13.ckpt",
+      "bytes": 544,
+      "header": [
+        64,
+        64,
+        18305
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L128_rep13.ckpt",
+      "bytes": 2080,
+      "header": [
+        128,
+        128,
+        11414
+      ],
+      "valid": true
+    },
+    {
+      "path": "/scratch/mo2273/dn/v2/cpu/checkpoints/life_q0.046359_L192_rep13.ckpt",
+      "bytes": 4640,
+      "header": [
+        192,
+        192,
+        2500000
+      ],
+      "valid": true
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "campaign": "dn-v2-20261103-near-midpoint",
+  "declared_utc": "2026-11-03T09:00:16.737303+00:00",
+  "deadline_utc": "2026-11-03T11:00:00+00:00",
+  "source_sha256": "dd56be11b1e7865b52ec4607432eb5733f2306b4a714312690df801793f22784",
+  "seed_algorithm": "BLAKE2b-64; namespace dn-v2-20261103-near-midpoint",
+  "source_manifest": "production_manifest_near_large.json",
+  "source_manifest_sha256": "be4bda3b00fba1bbf64e39bc5a37d3967786787933eb0e2bdc89d325adbf62fc",
+  "families": {
+    "near_voter": {
+      "workers": 4,
+      "tasks": 4
+    }
+  },
+  "motivation": "Independent midpoint q=.000642 between existing .000640 late-collapse trajectories and .000644 persistent trajectories; a finite-size/time crossover refinement, not an asymptotic phase-boundary determination.",
+  "eligibility": "All four predeclared independent runs must complete. Retain absorptions; no pooling with selected survivors from prior q values.",
+  "analysis_windows": [
+    [
+      5000000,
+      10000000
+    ],
+    [
+      10000000,
+      20000000
+    ]
+  ],
+  "submission_policy": "Four new workers behind existing submitted work, no priorities/cancellations changed; hard 11 UTC deadline.",
+  "tasks": [
+    {
+      "id": "near_midpoint20m_L8192x8192_q.000642_s1",
+      "family": "near_voter",
+      "observable": "near_bulk",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".000642",
+      "p": "0.995",
+      "alpha": "0.5",
+      "seed": 9367546822971210741,
+      "init_seed": 17645801505089293765,
+      "replica": 1,
+      "T": 20000000,
+      "every": 50000,
+      "profile": false,
+      "orientation": null,
+      "mode": "bulk",
+      "checkpoint_every": 1000000,
+      "work": 1342177280000000
+    },
+    {
+      "id": "near_midpoint20m_L8192x8192_q.000642_s2",
+      "family": "near_voter",
+      "observable": "near_bulk",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".000642",
+      "p": "0.995",
+      "alpha": "0.5",
+      "seed": 9603324284580042101,
+      "init_seed": 7743352292710471578,
+      "replica": 2,
+      "T": 20000000,
+      "every": 50000,
+      "profile": false,
+      "orientation": null,
+      "mode": "bulk",
+      "checkpoint_every": 1000000,
+      "work": 1342177280000000
+    },
+    {
+      "id": "near_midpoint20m_L8192x8192_q.000642_s3",
+      "family": "near_voter",
+      "observable": "near_bulk",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".000642",
+      "p": "0.995",
+      "alpha": "0.5",
+      "seed": 16997430838619781864,
+      "init_seed": 18033629789089504150,
+      "replica": 3,
+      "T": 20000000,
+      "every": 50000,
+      "profile": false,
+      "orientation": null,
+      "mode": "bulk",
+      "checkpoint_every": 1000000,
+      "work": 1342177280000000
+    },
+    {
+      "id": "near_midpoint20m_L8192x8192_q.000642_s4",
+      "family": "near_voter",
+      "observable": "near_bulk",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".000642",
+      "p": "0.995",
+      "alpha": "0.5",
+      "seed": 16043467059157726110,
+      "init_seed": 16095705850380173959,
+      "replica": 4,
+      "T": 20000000,
+      "every": 50000,
+      "profile": false,
+      "orientation": null,
+      "mode": "bulk",
+      "checkpoint_every": 1000000,
+      "work": 1342177280000000
+    }
+  ]
+}

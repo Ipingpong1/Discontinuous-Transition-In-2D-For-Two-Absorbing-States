@@ -1,0 +1,308 @@
+{
+  "schema": 1,
+  "campaign": "dn-v2-20261103-axial10m",
+  "declared_utc": "2026-11-03T10:25:59.056917+00:00",
+  "deadline_utc": "2026-11-03T11:05:00+00:00",
+  "source_sha256": "dd56be11b1e7865b52ec4607432eb5733f2306b4a714312690df801793f22784",
+  "seed_algorithm": "BLAKE2b-64; namespace dn-v2-20261103-axial10m",
+  "source_manifest": "production_manifest_orientation5m.json",
+  "source_manifest_sha256": "09f8fb1b0fd40f8fd7a625dcbebcf1f8c68ccc07a4e8304e9955216ad4040f31",
+  "families": {
+    "orientation": {
+      "workers": 12,
+      "tasks": 12
+    }
+  },
+  "motivation": "Independent extension of the axial front time horizon after the5M study resolved temporal drift; no outcomes from these new trajectories existed at declaration.",
+  "eligibility": "All four new independent runs perq must complete and cover each fixed geometry window. No pooling withT2M/T5M cohorts; no survivor selection; unbracketed roots withheld.",
+  "analysis_windows": [
+    [
+      2000000,
+      5000000
+    ],
+    [
+      5000000,
+      10000000
+    ]
+  ],
+  "primary_paired_contrast": "Same-run5\u201310M minus2\u20135M velocity; same within-q resample indices for paired root differences; allthreeq required.",
+  "submission_policy": "Ordinary queue behind all existing work; unchanged validated backend and >80% utilization monitor; new campaign11:05UTC ceiling only.",
+  "tasks": [
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04594_s1",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04594",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 431360107107152175,
+      "init_seed": 13728650512009477447,
+      "replica": 1,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04594_s2",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04594",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 987818570002263689,
+      "init_seed": 17822498868356586011,
+      "replica": 2,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04594_s3",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04594",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 3881234622813326976,
+      "init_seed": 16667240881982652107,
+      "replica": 3,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04594_s4",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04594",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 10901111555782430031,
+      "init_seed": 15862914504108647763,
+      "replica": 4,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04593_s1",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04593",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 7045191881075866947,
+      "init_seed": 10711537477243002066,
+      "replica": 1,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04593_s2",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04593",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 3653697048718584233,
+      "init_seed": 2935336295633536110,
+      "replica": 2,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04593_s3",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04593",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 4107835917387167251,
+      "init_seed": 9203441016979432870,
+      "replica": 3,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04593_s4",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04593",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 4647082354752678971,
+      "init_seed": 4137537754389833721,
+      "replica": 4,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04595_s1",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04595",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 6047013704265111419,
+      "init_seed": 9461328692976864818,
+      "replica": 1,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04595_s2",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04595",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 3422855250887890814,
+      "init_seed": 7032278625684581998,
+      "replica": 2,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04595_s3",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04595",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 16286079860851694192,
+      "init_seed": 15703280034544745453,
+      "replica": 3,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    },
+    {
+      "id": "axial10m_L8192x8192_ab1-0_q.04595_s4",
+      "family": "orientation",
+      "observable": "axial10m",
+      "Lx": 8192,
+      "Ly": 8192,
+      "q": ".04595",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 7294997082416526826,
+      "init_seed": 12000246741690527527,
+      "replica": 4,
+      "T": 10000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        0
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 671088640000000
+    }
+  ]
+}

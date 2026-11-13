@@ -1,0 +1,25 @@
+{
+  "revision": 2,
+  "supersedes_sha256": "a711ea8476af350b0aa543671c40f06afa428f8930ebd1819b33b04d4aa94f8f",
+  "prior_grid": [
+    ".04592",
+    ".04594",
+    ".04596"
+  ],
+  "grid": [
+    ".04593",
+    ".04594",
+    ".04595"
+  ],
+  "reason": "Before any5m task started, narrowed the common q grid to preserve separated-front geometry through5m for normal(2,1): the0.15--0.85 width gate permits |v|<=0.35*8192/(2*sqrt(5)*5e6)=1.282e-4. Originalq=.04592 risks crossing that bound. No outcomes from the new cohorts exist; original2m cohorts are unchanged.",
+  "prestart_verification": {
+    "checked_utc": "2026-11-03T08:01:01.859243+00:00",
+    "jobs": {
+      "21727284": "PENDING",
+      "21727285": "PENDING",
+      "21727286": "PENDING",
+      "21727287": "PENDING"
+    },
+    "command": "squeue -h -j 21727284,21727285,21727286,21727287 -o \"%i %T %S %j\""
+  }
+}

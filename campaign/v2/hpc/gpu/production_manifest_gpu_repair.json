@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "campaign": "dn-v2-20261103-exact-seed-gpu-repair",
+  "deadline_utc": "2026-11-03T11:00:00+00:00",
+  "source_sha256": "dd56be11b1e7865b52ec4607432eb5733f2306b4a714312690df801793f22784",
+  "seed_algorithm": "BLAKE2b-64; namespace dn-v2-20261103",
+  "families": {
+    "orientation": {
+      "workers": 1,
+      "tasks": 1
+    }
+  },
+  "repair_reason": "Frozen text footer claims T2m, but scheduled t1m record is absent while profile includes it. Task has always been excluded for profile/text timeline mismatch. Rerun exact declared initial and dynamical seeds from t0; preserve frozen originals.",
+  "repair_evidence": "data/v2/gpu/repair_evidence/orientation_L16384x16384_ab1-1_q.04596_s2",
+  "expected_original_final_sha256": "80023e06cffa7427e66cc8d04e18b1bce74c7c97d984ba31da4af50fd834847b",
+  "tasks": [
+    {
+      "id": "orientation_L16384x16384_ab1-1_q.04596_s2",
+      "family": "orientation",
+      "observable": "orientation",
+      "Lx": 16384,
+      "Ly": 16384,
+      "q": ".04596",
+      "p": "0.5",
+      "alpha": "0.5",
+      "seed": 16035999469130172135,
+      "init_seed": 11968202773756297966,
+      "replica": 2,
+      "T": 2000000,
+      "every": 50000,
+      "profile": true,
+      "orientation": [
+        1,
+        1
+      ],
+      "mode": "band",
+      "checkpoint_every": 1000000,
+      "work": 536870912000000
+    }
+  ]
+}

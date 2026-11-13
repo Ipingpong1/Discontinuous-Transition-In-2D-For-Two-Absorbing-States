@@ -1,0 +1,76 @@
+% Proposed replacement for the Introduction in the v2 manuscript.
+% Uses existing citation keys, plus castellano2012 in refs_additions.bib.
+\section{Introduction}
+\label{sec:intro}
+
+A transition into an absorbing state eliminates fluctuations. When two absorbing
+configurations are related by a $\mathbb{Z}_2$ symmetry, it can also select one of two
+equivalent ordered states. In two dimensions, this combination is closely associated with
+generalized voter (GV) criticality and its unusually slow coarsening. We study a binary
+lattice model in which the active phase instead meets the two absorbing states at a
+discontinuous transition. The evidence is a finite interface density at the transition,
+reversing fronts, metastable decay, and nucleation, measured in complementary geometries.
+
+The two-dimensional picture developed through several distinct results. Dornic \emph{et al.}
+identified voter coarsening as a universality class for transitions driven by interfacial
+noise between dynamically equivalent absorbing states~\cite{dornic2001}. Its prototype is the
+voter model, whose interface density decays as $1/\ln t$ in two
+dimensions~\cite{clifford1973,holley1975,cox1986,krapivsky1992}. Droz, Ferreira, and Lipowski
+then showed that extending the interaction range can split a direct transition into Ising
+symmetry breaking followed by directed-percolation absorption~\cite{droz2003}. The Langevin
+description of Al Hammal \emph{et al.} unified these scenarios: although its deterministic
+drift permits bistability, their two-dimensional simulations gave a GV transition, whereas
+they reported fully first-order behavior in three dimensions~\cite{alhammal2005}. Subsequent
+microscopic studies recovered GV and Ising--DP transitions~\cite{vazquez2008,castellano2009,azizi2020}.
+Rodrigues \emph{et al.}, however, reported a discontinuous line for a triangular-lattice
+model~\cite{rodrigues2015}. Their analysis does not establish the finite activity jump and
+phase-coexistence properties tested here, leaving a reason to examine these observables
+directly.
+
+The distinction matters because a magnetization jump alone does not establish a
+discontinuous loss of activity: it also occurs at the GV transition, where the interface
+density vanishes continuously~\cite{dornic2001,alhammal2005}. Here a discontinuous transition
+means a nonzero limiting activity on the active side, supported by coexistence
+and nucleation tests. Such behavior is established in two-dimensional reaction
+models~\cite{ziff1986,bidaux1989,lubeck2006}, in models with three symmetric absorbing
+states~\cite{lipowski2002,azizi2018}, and in cyclic ecological models whose two absorbing
+alliances contain many configurations and retain internal motion~\cite{szabo2004,guisoni2013}.
+The latter provide close precedents for front competition and active layers between ordered
+phases. The microscopic setting here is different: each site has two states, and there are
+exactly two absorbing configurations.
+
+Our model combines the self-complementary Day \& Night cellular-automaton rule with voter
+copying and a local minority flip. It is a short-range nonlinear voter model: the flip
+probability depends only on the number of disagreeing Moore neighbors. This construction
+connects it to the nonlinear voter models of Cox and Durrett~\cite{cox1991} and the
+probabilistic automata studied by Molofsky \emph{et al.}~\cite{molofsky1999}. A positive voter
+weight removes all frozen configurations except the two uniform states. At the
+representative weight $p=1/2$, we locate the transition from planar-front motion and test
+the bulk and droplet dynamics around that location. We compare different front
+orientations and place a large droplet of each phase inside the other, which checks for
+the orientation-dependent coexistence possible in nonequilibrium
+models~\cite{wang2015,liu2018}. Bulk measurements then resolve a dense active phase and its
+metastable decay. Walls between the two absorbing phases acquire an active layer whose
+thickness increases toward the transition.
+
+We also follow the invasion boundary toward the voter point. Coalescing random walks
+provide a finite-time closure for the reaction term of a weak voter perturbation, inspired
+by the rigorous theory in $d\ge3$~\cite{cox2013}. Within this closure the transition scale is
+$q^*\propto\alpha(1-p)$, with an amplitude close to the measured one. Contributions from
+five or more distinct ancestral lineages can support bistability. In two dimensions the
+matching time remains undetermined, so this construction is an approximate account of the
+boundary and a guide to the endpoint problem.
+
+The five-cell automaton of Molofsky \emph{et al.} supplies a useful comparison. Their
+mean-field map has a regime with three stable fixed points, but their spatial simulations
+did not find the corresponding dependence on initial density~\cite{molofsky1999}.
+Our closure approximately locates its invasion boundary, while direct simulations reveal
+strong suppression of small seeds near that boundary. They do not resolve the order of
+the transition or the metastable active branch predicted by the closure. This comparison
+separates the successful boundary estimate from the stronger claim of bistability.
+
+Section~\ref{sec:model} defines the dynamics and observables.
+Section~\ref{sec:flagship} presents the coexistence tests at $p=1/2$.
+Section~\ref{sec:line} studies the parameter dependence and sensitivity to update timing,
+and Sec.~\ref{sec:theory} develops the finite-time closure.
+The comparison with the five-cell rule is given in Appendix~\ref{app:molofsky}.

@@ -1,0 +1,37 @@
+\section{Methods}
+\label{sec:methods}
+
+We use independently seeded runs in five geometries: random density-$1/2$
+bulk states, axial and tilted half-active bands, random active disks or
+absorbing holes, small seeds in an absorbing background, and walls between
+the two absorbing states. One step is one simultaneous lattice update.
+The bit-parallel CPU simulator and dense CUDA backend use position- and
+time-indexed Philox random numbers~\cite{salmon2011}. Their integer updates,
+profiles and transferred checkpoints agree bit for bit in the archived
+validation cases. The full protocols and computational checks are in
+Supplemental Secs.~\ref{S-sec:protocols} and \ref{S-app:numerics}.
+
+For the extended band measurements, a normal $(a,b)$ defines the coordinate
+$s=(ay-bx)\bmod L$, with normal spacing $1/\sqrt{a^2+b^2}$.
+We smooth over nine physical lattice spacings and follow the two exterior
+profile crossings. Half the rate of change of their separation defines
+the normal velocity. A complete declared cohort contributes to a window
+only if every run retains the separated-front geometry throughout.
+Interior activity is checked separately: the loss of a contour in a
+dissolving band is not interpreted as coherent front retreat.
+
+We integrate each bulk trajectory in time and weight independent runs
+equally, including absorbed trajectories through their known absorbing
+state. First recorded half-density loss and complete consensus are distinct
+events; lifetime summaries retain censoring. Droplet growth means reaching
+the finite box boundary before extinction and before the stated horizon,
+not survival forever. Escapes are separately counted in seed experiments.
+
+Independent runs, not lattice sites or output records, are the sampling
+units. The large-system ensembles have four runs per point. Percentile
+bootstrap intervals describe the observed run variation conditional on the
+chosen estimator and window; with four runs their nominal $95\%$ level
+does not ensure calibrated coverage. We display individual paired changes
+for delicate drift claims and report small-sample reference calculations
+separately. Geometry, fitting choices, finite size and finite time remain
+systematic uncertainties rather than components of a pooled error bar.

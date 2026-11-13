@@ -1,0 +1,168 @@
+{
+  "version": "v3",
+  "date": "2026-11-04",
+  "path_base": "Project root after extracting reproducibility and input packages together",
+  "reproduction_driver": "campaign/v3/reproduce.py",
+  "build_driver": "campaign/v3/build_paper.py",
+  "package_builder": "campaign/v3/package_release.py",
+  "reproduction_instructions": "campaign/v3/README.md",
+  "new_analyses": [
+    {
+      "name": "bulk_activity",
+      "scope": "Raw largest-system bulk density and actual flip rates",
+      "script": "campaign/v3/analysis/bulk_activity.py",
+      "results": "campaign/v3/results/bulk_activity",
+      "input_trees": [
+        "data/v2/gpu/runs"
+      ]
+    },
+    {
+      "name": "fronts_review",
+      "scope": "Raw front proxies, small-sample contrasts, large droplet estimates and curvature ODE",
+      "script": "campaign/v3/analysis/fronts_review.py",
+      "results": "campaign/v3/results/fronts_review",
+      "input_trees": [
+        "data/v2/gpu/runs",
+        "data/v2/cpu",
+        "campaign/v2/results"
+      ]
+    },
+    {
+      "name": "film_endpoint",
+      "scope": "Raw long endpoint trajectories and archived wall-edge reductions",
+      "script": "campaign/v3/analysis/film_endpoint.py",
+      "results": "campaign/v3/results/film_endpoint",
+      "input_trees": [
+        "data/v2/gpu/runs",
+        "data/figdata"
+      ]
+    },
+    {
+      "name": "molofsky",
+      "scope": "Raw five-cell profile eligibility, one-sided extrapolations, censored lifetimes and lineage counts",
+      "script": "campaign/v3/analysis/molofsky.py",
+      "results": "campaign/v3/results/molofsky",
+      "input_trees": [
+        "campaign/molofsky_sim",
+        "campaign/v2/results"
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "figure": "paper/v3/figs/fig_drop.pdf",
+      "source": "paper/v3/figs/fig_drop.py",
+      "caption": "paper/v3/sections/droplets.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_flagship.pdf",
+      "source": "paper/v3/figs/fig_flagship.py",
+      "caption": "paper/v3/sections/figure_flagship.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_near20m.pdf",
+      "source": "paper/v3/figs/fig_gpu_near20m.py",
+      "caption": "paper/v3/sections/figure_gpu_near20m.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_wetting.pdf",
+      "source": "paper/v3/figs/fig_wetting_extended.py",
+      "caption": "paper/v3/sections/figure_gpu_wetting.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_phase.pdf",
+      "source": "paper/v3/figs/fig_phase.py",
+      "caption": "paper/v3/sections/figure_phase.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_snap.pdf",
+      "source": "paper/v3/figs/fig_snap.py",
+      "caption": "paper/v3/sections/model.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_molofsky.pdf",
+      "source": "paper/v3/figs/fig_molofsky.py",
+      "caption": "paper/v3/sections/molofsky.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_bulk.pdf",
+      "source": "paper/v3/figs/fig_gpu_v2.py",
+      "caption": "paper/v3/sections/supp_bulk.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_spatial_v2.pdf",
+      "source": "paper/v3/figs/fig_spatial_v2.py",
+      "caption": "paper/v3/sections/supp_bulk.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_bulk05.pdf",
+      "source": "paper/v3/figs/fig_bulk05.py",
+      "caption": "paper/v3/sections/supp_bulk.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_lifetimes_v2.pdf",
+      "source": "paper/v3/figs/fig_lifetimes_v2.py",
+      "caption": "paper/v3/sections/supp_bulk.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_orient.pdf",
+      "source": "paper/v3/figs/fig_orient.py",
+      "caption": "paper/v3/sections/supp_fronts.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_fronts.pdf",
+      "source": "paper/v3/figs/fig_gpu_v2.py",
+      "caption": "paper/v3/sections/supp_fronts.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_fronts5m.pdf",
+      "source": "paper/v3/figs/fig_gpu_v2.py",
+      "caption": "paper/v3/sections/supp_fronts.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_drop2.pdf",
+      "source": "paper/v3/figs/fig_drop2.py",
+      "caption": "paper/v3/sections/supp_fronts.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_eta.pdf",
+      "source": "paper/v3/figs/fig_eta.py",
+      "caption": "paper/v3/sections/supp_model.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_gpu_near.pdf",
+      "source": "paper/v3/figs/fig_gpu_v2.py",
+      "caption": "paper/v3/sections/supp_survey.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_voter.pdf",
+      "source": "paper/v3/figs/fig_voter.py",
+      "caption": "paper/v3/sections/supp_survey.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_wall05.pdf",
+      "source": "paper/v3/figs/fig_wall05.py",
+      "caption": "paper/v3/sections/supp_wetting.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_rough.pdf",
+      "source": "paper/v3/figs/fig_rough.py",
+      "caption": "paper/v3/sections/supp_wetting.tex"
+    },
+    {
+      "figure": "paper/v3/figs/fig_theory_v2.pdf",
+      "source": "paper/v3/figs/fig_theory_v2.py",
+      "caption": "paper/v3/sections/theory.tex"
+    }
+  ],
+  "retained_reductions": "campaign/v2/results",
+  "retained_analysis_sources": "campaign/v2/analysis",
+  "input_manifest": "releases/v3/INPUTS_MANIFEST.json",
+  "verification": "reports/v3/reproduce_verification.json",
+  "limits": [
+    "No production simulations were repeated.",
+    "Retained figures may start from archived v2 reductions; the v3 driver recomputes only its four declared analysis modules.",
+    "Original free-band roughness snapshots are unavailable; that comparison is removed and wall-only plots use archived edge reductions.",
+    "Historical endpoint estimates are finite-window survey values, not asymptotic jumps."
+  ]
+}

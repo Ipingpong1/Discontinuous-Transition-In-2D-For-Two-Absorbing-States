@@ -1,0 +1,58 @@
+\input{preamble}
+\externaldocument[S-]{supplement}
+\begin{document}
+\title{Discontinuous transition into two symmetric absorbing states in two dimensions}
+\date{4 November 2026}
+\begin{abstract}
+A magnetization jump at a transition into two symmetric absorbing states
+does not by itself distinguish a discontinuous loss of activity from
+generalized voter criticality. We study a short-range binary lattice model
+combining the self-complementary Day \& Night rule, voter copying, and a
+local minority flip. At voter weight $p=1/2$, bulk bond activity stays near
+0.29 across the measured planar-front reversals, in systems up to
+$16384^2$ sites followed for five million steps. About 21\% of sites
+continue to flip per step. Independently prepared fronts change direction
+in the same narrow parameter region; metastable bulk decay and opposing
+growth of disks and holes provide complementary evidence for a
+discontinuous active--absorbing transition. A wall between the two absorbing
+phases accumulates an increasing amount of active material. Small
+directional differences remain sensitive to geometry and inference, and
+the wetting exponent is unresolved. Toward the voter point the invasion
+scale is approximately $q^*\propto\alpha(1-p)$. A finite-time coalescing-walk
+closure explains this scale and identifies terms capable of bistability,
+but longer runs expose continuing relaxation near the endpoint and leave
+its asymptotic transition order open.
+\end{abstract}
+\maketitle
+\raggedbottom
+\setlength{\parskip}{0pt}
+
+\input{sections/introduction}
+\input{sections/model}
+\input{sections/methods}
+\input{sections/flagship}
+\input{sections/droplets}
+\input{sections/wetting}
+\input{sections/endpoint}
+\input{sections/theory}
+\input{sections/discussion}
+
+\begin{acknowledgments}
+Simulations were run on the Torch cluster at New York University.
+\end{acknowledgments}
+
+\section*{Data availability}
+The accompanying manuscript-source archive contains this paper, its supplement,
+and the exact figure files. A separate reproducibility archive contains the
+CPU and CUDA source code, parameter and seed manifests, reduced tables,
+analysis and figure scripts, and a documented rebuild procedure.
+The companion input-data archive provides the locally available trajectories,
+profiles, final configurations, and legacy figure reductions used by those
+analyses. Per-file checksums and explicit provenance distinguish raw inputs,
+retained reductions, and the new analyses. The original snapshots underlying
+the removed free-band roughness comparison are unavailable locally; the
+revised wall plot uses the archived wall-edge reductions. No public repository
+identifier is assigned in this review draft.
+
+\bibliography{refs}
+\end{document}

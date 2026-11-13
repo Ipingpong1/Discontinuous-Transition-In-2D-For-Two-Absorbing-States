@@ -1,0 +1,7 @@
+TECTONIC ?= tectonic
+
+.PHONY: all pdf
+all: pdf
+
+pdf:
+	$(TECTONIC) --keep-logs --keep-intermediates main.tex

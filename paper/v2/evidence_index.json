@@ -1,0 +1,192 @@
+{
+  "purpose": "Map the revised paper's claims to executable analyses and recorded evidence. Paths are relative to the project root; numerical values remain in the linked result tables.",
+  "scope": "The manuscript reports a numerical coexistence result at p=alpha=1/2. The infinite-time voter endpoint, exact orientation independence, asymptotic wetting exponent and controlled d=2 matching theory are not established.",
+  "items": [
+    {
+      "claim": "Exactly two absorbing configurations for p>0 in the studied model",
+      "manuscript": "sec:lemma",
+      "evidence": [
+        "paper/v2/main.tex"
+      ],
+      "qualification": "Analytic proof. The finite-system recurrence argument additionally uses strictly interior nonzero flip probabilities; p=0 has extra frozen states."
+    },
+    {
+      "claim": "Exponentially many frozen configurations at p=0",
+      "manuscript": "app:frozen; eq:frozenbound",
+      "evidence": [
+        "paper/v2/main.tex",
+        "reports/v2/frozen_motif_construction.txt",
+        "reports/v2/frozen_motif_verify.py"
+      ],
+      "qualification": "Explicit independent 2x2 checkerboard-block switches prove N_frozen >= 2^(LxLy/16) for lengths divisible by 4. Fixed-width transfer matrices estimate strip entropies only."
+    },
+    {
+      "claim": "Front reversal and its orientation, time-window and threshold dependence",
+      "manuscript": "sec:fronts",
+      "analysis": [
+        "campaign/v2/analysis/fronts.py",
+        "campaign/v2/analysis/gpu_campaign.py",
+        "campaign/v2/analysis/front_stationarity.py",
+        "campaign/v2/analysis/axial10m_diagnostics.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/fronts/crossings.csv",
+        "campaign/v2/results/gpu/front_crossings.json",
+        "campaign/v2/results/gpu/orientation_differences.json",
+        "campaign/v2/results/gpu/front5m_paired_crossings.json",
+        "campaign/v2/results/coexistence_reference.json",
+        "campaign/v2/results/gpu/coexistence_audit.json",
+        "campaign/v2/results/gpu/axial10m_paired_crossings.json",
+        "reports/v2/axial10m_analysis_audit.json",
+        "campaign/v2/hpc/gpu/production_manifest_axial10m.json"
+      ],
+      "qualification": "Every published parameter/window retains all declared seeds with complete valid geometry. Sampling intervals are separate from threshold, interpolation, temporal and orientation effects. T2M, T5M and independent axial T10M cohorts remain separate; unresolved shifts do not establish equivalence."
+    },
+    {
+      "claim": "Persistent bulk activity and finite-size lifetime contrast near the flagship transition",
+      "manuscript": "sec:bulk",
+      "analysis": [
+        "campaign/v2/analysis/bulk.py",
+        "campaign/v2/analysis/gpu_campaign.py",
+        "campaign/v2/analysis/cpu_lifetimes.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/bulk/summary.csv",
+        "campaign/v2/results/gpu/bulk_summary.csv",
+        "campaign/v2/results/gpu/bulk_window_summary.csv",
+        "campaign/v2/results/cpu_lifetimes/summary_complete.csv",
+        "campaign/v2/results/gpu_magnetism/ratios.csv",
+        "reports/v2/lifetime_batch_comparison.json",
+        "reports/v2/hpc/legacy_v13_v15_replay.json",
+        "reports/v2/hpc/cpu_repairs_applied.json",
+        "campaign/v2/results/cpu_lifetimes/nearline_complete.csv"
+      ],
+      "qualification": "Unconditional complete ensembles, run-wise time integration, known absorbed extensions and explicit censoring. Half-density crossing differs from consensus. Finite-time lifetime observations do not determine an asymptotic growth law."
+    },
+    {
+      "claim": "Direct spatial correlations in the large active systems",
+      "manuscript": "sec:bulk",
+      "analysis": [
+        "campaign/v2/analysis/spatial_correlations.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/spatial_correlations/analysis.json",
+        "campaign/v2/results/spatial_correlations/correlations_summary.csv"
+      ],
+      "qualification": "Final configurations from complete cohorts only, with SHA and global-observable checks. Exact ensemble spin symmetry gives zero mean. Signed long-distance fluctuations and pointwise independent-run intervals are retained; no exponent or correlation-length extrapolation is inferred."
+    },
+    {
+      "claim": "Droplet growth, curvature and complementary droplets of the two phases",
+      "manuscript": "sec:drops and sec:fronts",
+      "analysis": [
+        "campaign/v2/analysis/droplets.py",
+        "paper/v2/figs/fig_drop2.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/droplets/critical_drop_counts.csv",
+        "campaign/v2/results/droplets/critical_radius.json",
+        "campaign/v2/results/droplets/two_drop_rates.csv",
+        "campaign/v2/results/drop_fronts/points.csv"
+      ],
+      "qualification": "Success is boundary growth before extinction and before the declared horizon, not infinite-time survival. No interval with both droplets shrinking is resolved at the actual sampled probabilities; an arbitrarily narrow interval is not excluded."
+    },
+    {
+      "claim": "Increasing active adsorption at a wall and the ambiguity of a wetting exponent",
+      "manuscript": "sec:wall",
+      "analysis": [
+        "campaign/v2/analysis/wetting.py",
+        "campaign/v2/analysis/gpu_wetting.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/wetting/analysis.json",
+        "campaign/v2/results/gpu_wetting/analysis.json",
+        "campaign/v2/results/gpu_wetting/summary.csv",
+        "reports/v2/wetting_complete_central.txt",
+        "reports/v2/wetting_sensitivity_joint_dense.csv"
+      ],
+      "qualification": "All 28 new wall runs are complete with matched-size baselines and valid geometry. The closest point resolves a roughly 4.5% size difference and weak late drift. Legacy fits retain their disclosed selection and baseline limits. Joint forecasts use one common front-derived reference, with sampling covariance and reference sensitivity kept separate; no asymptotic exponent or size convergence is claimed."
+    },
+    {
+      "claim": "Long crossovers and the unresolved order near the voter endpoint",
+      "manuscript": "sec:voter",
+      "analysis": [
+        "campaign/v2/analysis/gpu_campaign.py",
+        "campaign/v2/analysis/susceptibility.py",
+        "campaign/v2/analysis/seed_tails.py"
+      ],
+      "evidence": [
+        "campaign/v2/results/gpu/bulk_window_summary.csv",
+        "campaign/v2/results/gpu/front_geometry.json",
+        "campaign/v2/results/susceptibility/ratios.csv",
+        "campaign/v2/results/seed_tails/summary.json"
+      ],
+      "qualification": "The L8192 q=.000640 ensemble declines through 20M with one consensus event; midpoint q=.000642 persists but retains late drift. A front requires a separated band with interpretable interior activity. Finite-time seed suppression does not universally exclude GV criticality, and sampled-active-point magnetic ratios do not determine the boundary universality."
+    },
+    {
+      "claim": "Independent fixed-size rare-event confirmation",
+      "manuscript": "sec:voter",
+      "analysis": [
+        "campaign/v2/analysis/seed_tails.py"
+      ],
+      "evidence": [
+        "campaign/v2/hpc/cpu/confirm8m/manifest.json",
+        "campaign/v2/hpc/cpu/manifest.json",
+        "campaign/v2/results/seed_tails/independent_batches.csv",
+        "campaign/v2/results/seed_tails/summary.json",
+        "reports/v2/hpc/confirm8m_completion_audit.json",
+        "reports/v2/hpc/confirm8m_checkpoint_audit.json",
+        "reports/v2/confirm8m_independent_audit.json"
+      ],
+      "qualification": "The separately declared primary 8M confirmation is complete: all 16 fixed 500k shards, with adaptive stopping disabled, disjoint RNG keys and output/checkpoint agreement. The original 16M cohort remains separate. Local exponent windows require at least 20 surviving replicas and do not establish an asymptotic law."
+    },
+    {
+      "claim": "Higher-lineage terms permit bistability in an exact finite-cutoff reaction calculation",
+      "manuscript": "sec:theory",
+      "analysis": [
+        "campaign/v2/theory/cutoff_sensitivity.py"
+      ],
+      "evidence": [
+        "campaign/v2/theory/results/cutoff_thresholds.csv",
+        "campaign/v2/theory/results/matching_sensitivity.csv",
+        "campaign/v2/theory/results/provenance.json"
+      ],
+      "qualification": "Exact identities refer to the stated finite-time voter reference law. Physical matching is an approximation, its time-scale sensitivity is not a confidence interval, and checkpoint histograms lack the cross-time covariance needed for independent-point extrapolation."
+    },
+    {
+      "claim": "Dense CPU/GPU trajectory equivalence and reproducible completion",
+      "manuscript": "app:numerics",
+      "analysis": [
+        "campaign/v2/hpc/gpu/validate.py",
+        "campaign/v2/hpc/gpu/storage_stage.py",
+        "campaign/v2/analysis/import_gpu_bundles.py"
+      ],
+      "evidence": [
+        "reports/v2/hpc/gpu_v3_pilot_audit.json",
+        "reports/v2/hpc/gpu_workers",
+        "campaign/v2/results/gpu/provenance.json"
+      ],
+      "qualification": "Each production worker validates before running. Completion includes parameter, scheduled-record, profile, final-time and final-state digest checks. GPU absorption is interval observed; sparse replicas and precise lifetimes use CPU."
+    },
+    {
+      "claim": "Five-cell comparison distinguishes boundary prediction from unresolved transition order",
+      "manuscript": "app:molofsky",
+      "evidence": [
+        "reports/v2/molofsky_endpoint_audit.txt",
+        "reports/v2/molofsky_endpoint_counts.csv",
+        "reports/v2/molofsky_endpoint_audit.json"
+      ],
+      "qualification": "The four resolved disk half-survival radii use T=20000 and adaptive survivor-target sampling. All escapes are zero. A fifth parameter pair supplies only a radius lower bound. Initial small-seed decay is not asymptotic linear stability."
+    },
+    {
+      "claim": "Supporting eta and lazy-update surveys",
+      "manuscript": "app:eta and sec:async",
+      "evidence": [
+        "reports/v2/eta_async_supporting_audit.txt",
+        "reports/v2/eta_async_supporting_audit.json",
+        "campaign/v2/results/lazy05_fronts/analysis.json",
+        "reports/v2/lazy05_corrected_spotcheck.json"
+      ],
+      "qualification": "Legacy profile cuts and parameter-fit sensitivity are retained explicitly; eta examples are individual trajectories. Lazy late seed plateaus contain boundary escapes and adaptively stopped samples. Finite-r checks do not establish the continuous-time limit. The p=.5 lazy crossing is reanalyzed with the corrected envelope and explicit physical-time windows; its ratio is reported only as approximately .86."
+    }
+  ]
+}

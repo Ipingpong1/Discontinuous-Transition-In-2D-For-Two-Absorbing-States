@@ -1,0 +1,81 @@
+\section{Simulation protocols and statistical conventions}
+\label{sec:protocols}
+
+\textit{Simulation.} We use a bit-parallel implementation in which each 64-bit word holds 64
+sites and the neighbor counts and flip decisions are computed with bitwise operations. Each site
+draws one uniform random number per step and flips if it is below the flip probability of its
+class $(\sigma_i, j_i)$; all classes of a word share one bit-serial comparison, so the cost does
+not depend on the number of distinct flip probabilities. Random numbers come from the
+counter-based Philox$4\times 32$-10 generator~\cite{salmon2011}, keyed by the run's seed and
+indexed by (time, row, word), so every run is bit-for-bit reproducible independently of the
+number of threads and of restarts from checkpoints. The code passes a bit-exact comparison with a
+naive per-site implementation for several rules and lattice shapes, and statistical tests of
+the per-class flip frequencies (Supplemental Sec.~\ref{app:numerics}). Near the transition it performs
+about $10^9$ site updates per second per core. The extended dense-lattice
+campaign uses a CUDA backend built from the same integer update and random-number
+functions. CPU and GPU outputs agree bit for bit in the validation cases,
+including large lattices, directed profiles, and checkpoints transferred in
+both directions (Supplemental Sec.~\ref{app:numerics}).
+
+\textit{Protocols.} We use five kinds of runs.
+(i) \emph{Bulk}: random initial condition with density $1/2$ on an $L\times L$ torus.
+(ii) \emph{Strip fronts}: on an $L_x\times L_y$ torus, the rows $y<L_y/2$ start random and the
+rest dead, giving two flat fronts between the active phase and the absorbing state. The per-row
+interface counts are recorded, each front is located at a fixed fraction of
+the relaxed interior activity, and the velocity $v$ is half the slope of the
+strip width, $W(t) = W_0 + 2vt$,
+fitted while the geometry remains a separated pair of fronts. The reference
+level and validity windows are specified in Sec.~\ref{app:numerics}.
+(iii) \emph{Tilted bands}: a band of direction $(a,b)$, the sites with
+$(a y - b x)\bmod L < L/2$, on an $L\times L$ torus. Its two edges have total length
+$2L\sqrt{a^2+b^2}$. Profiles binned along the normal locate both edges directly;
+their separation gives the normal velocity without converting total activity
+into an area.
+(iv) \emph{Droplets and seeds}: a disk of radius $R$ whose sites are alive with probability $1/2$
+(or a $2\times 2$ block of live sites) in the all-dead state. Many independent replicas are run;
+since a site with $j = 0$ never flips, only the bounding box of the active region needs to be
+updated, which is exact and makes each replica cheap. A replica stops when it
+dies, reaches the lattice edge, or reaches its declared time horizon.
+For the droplet experiment, $P_{\rm grow}$ is the probability of reaching
+the edge before extinction and before that horizon. In seed-survival curves,
+escaped replicas are retained as a separately recorded contribution; they
+bound rather than directly measure survival after escape.
+(v) \emph{Walls}: all-alive rows $y<L_y/2$ and all-dead rows above, i.e., two flat walls between
+the two absorbing phases and no active phase at $t = 0$.
+Times are in steps (one synchronous update of all sites). Error bars are standard errors over
+independent runs unless stated otherwise.
+
+\textit{Statistical analysis.} The reanalyzed flagship bulk data and the new
+fixed-manifest campaigns use every run in complete, predetermined seed groups,
+with no density filter or conditioning on survival. Supporting parameter surveys
+retain their separately stated windows and selection protocols.
+A partially finished fixed group is retained for diagnostics but not
+used as an unconditional ensemble: absorption can make a run finish sooner
+than a surviving trajectory. We integrate each sampled
+trajectory in time before averaging independent runs; a trajectory is extended
+by its known constant state after absorption. The half-density time is the first
+recorded crossing of $\rho<0.145$ after $t=10^3$, half a reference density
+$\rho_{\rm ref}=0.29$ near the flagship transition. It is distinct from complete
+consensus. Five legacy $L=64$ runs already below this threshold at the analysis
+origin are marked left censored at $10^3$, with lower bound zero. Other
+first observed crossings retain the preceding output time as a recording-grid
+diagnostic. Activity is not monotone, so brief unobserved dips can occur earlier;
+these brackets are not rigorous bounds on its first physical passage.
+Unobserved events are right censored, and survival curves and restricted mean times retain
+that censoring. An event-free ensemble supplies right-censored observations
+and a bound on finite-time survival, not a measured mean lifetime.
+Independent-run resampling gives the reported bootstrap
+intervals. For the four-run large-system groups these are approximate measures
+of observed run variation and do not account for rare outcomes absent from
+the sample. Event counts and systematic fitting-window checks are reported
+separately.
+
+%=====================================================================================
+
+The percentile intervals for four-run ensembles are displayed as conditional
+summaries of observed run variation, not calibrated $95\%$ error guarantees.
+We show individual paired changes where their sign is used in the text.
+For the two small directional contrasts and midpoint density drift we also
+report a small-sample $t$ reference calculation, keeping its normality and
+linearization assumptions explicit. Neither method substitutes for more
+independent trajectories when precise tail coverage is essential.
